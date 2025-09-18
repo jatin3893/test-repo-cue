@@ -1,6 +1,6 @@
 openapi: '3.0.0'
 servers:
-  - url: example
+  - url: examplead awdlanda
 info:
   contact:
     name: Jon
