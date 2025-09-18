@@ -1,6 +1,6 @@
 openapi: '3.0.0'
 servers:
-  - url: example.com
+  - url: example
 info:
   contact:
     name: Jon
