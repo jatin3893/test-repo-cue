@@ -13,7 +13,7 @@
 					"name": "{spacecraftId}",
 					"item": [
 						{
-							"name": "Read a spacecraft 2",
+							"name": "Read a spacecraft",
 							"event": [
 								{
 									"listen": "test",
