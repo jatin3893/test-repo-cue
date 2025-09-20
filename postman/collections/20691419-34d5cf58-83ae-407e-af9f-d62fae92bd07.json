@@ -13,7 +13,7 @@
 					"name": "{spacecraftId}",
 					"item": [
 						{
-							"name": "Read a spacecraft",
+							"name": "Read a spacecraft 2",
 							"event": [
 								{
 									"listen": "test",
@@ -52,7 +52,6 @@
 									],
 									"variable": [
 										{
-											"id": "bc17e8cd-837a-4f60-961a-db7d87335e27",
 											"key": "spacecraftId",
 											"value": "string",
 											"description": "(Required) The unique identifier of the spacecraft"
