@@ -1,3 +1,37 @@
+
+asyncapi: '2.5.0'
+info:
+  title: Chat API
+  version: '1.0.0'
+  description: |
+    The Smartylighting Streetlights API allows you
+    to remotely manage the city lights.
+  license:
+    name: Apache 2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0'
+  contact:
+    name: Streetlights API Developers
+    url: https://example.com/contact
+    email: contact@example.com
+  termsOfService: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+  mosquitto:
+    url: mqtt://test.mosquitto.org
+    protocol: mqtt
+channels:
+  light/measured:
+    publish:
+      summary: Inform about environmental lighting conditions for a particular streetlight
+      operationId: onLightMeasured
+      message:
+        name: LightMeasured
+        payload:
+          $ref: '#/components/schemas/LightMeasuredPayloadSchema'
+        examples:
+          - payload:
+              id: 1
+              lumens: 1
+              sentAt: 2023-09-01T18:00:00Z
 openapi: '3.0.0'
 servers:
   - url: examplead awdlanda
@@ -40,20 +74,28 @@ paths:
                 $ref: '#/components/schemas/Error'
 components:
   schemas:
-    SpacecraftId:
-      description: The unique identifier of a spacecraft
-      type: string
-    Spacecraft:
+    LightMeasuredPayloadSchema:
       type: object
+      description: Payload for LightMeasured API
       required:
         - id
-        - name
-        - type
+        - lumens
+        - sentAt
       properties:
         id:
-          $ref: '#/components/schemas/SpacecraftId'
-        name:
+          type: integer
+          minimum: 0
+          description: Id of the streetlight
+        lumens:
+          type: integer
+          minimum: 0
+          description: Light intensity measured in lumens
+        sentAt:
           type: string
+          format: date-time
+          description: Date and time when the message was sent
+          minLength: 20
+          maxLength: 29
         type:
           type: string
           enum:
