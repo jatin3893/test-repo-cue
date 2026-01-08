@@ -10,6 +10,7 @@
       "id": "2840b8b3-e2b8-4375-9552-5978b692eb1c",
       "request": {
         "method": "GET",
+        "header": [],
         "url": {
           "raw": "{{serverUrl}}/todo",
           "host": [
@@ -19,7 +20,20 @@
             "todo"
           ]
         }
-      }
+      },
+      "response": []
+    },
+    {
+      "name": "New Todo",
+      "id": "1a328b66-7be0-44f8-9a43-8af9e5718c85",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
     }
   ]
 }
