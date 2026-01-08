@@ -8,6 +8,9 @@
     {
       "name": "List Todos",
       "id": "2840b8b3-e2b8-4375-9552-5978b692eb1c",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "GET",
         "header": [],
@@ -24,8 +27,11 @@
       "response": []
     },
     {
-      "name": "New Todo",
+      "name": "DElete Todo",
       "id": "1a328b66-7be0-44f8-9a43-8af9e5718c85",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "GET",
         "header": [],
